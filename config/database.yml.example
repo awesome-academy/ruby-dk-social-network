@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ruby-dk-social-network_development
+
+test:
+  <<: *default
+  database: ruby-dk-social-network_test
+
+production:
+  <<: *default
+  database: ruby-dk-social-network_production
+  username: ruby-dk-social-network
+  password: <%= ENV['RUBY-DK-SOCIAL-NETWORK_DATABASE_PASSWORD'] %>
