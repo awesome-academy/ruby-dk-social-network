@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light d-flex">
+  <div class="container">
+    <div class="logo">
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= fa_stacked_icon "camera inverse", base: "circle"%>
+        <%= t "title" %>
+      <% end %>
+    </div>
+    <div class="m-auto">
+      <%= form_with class: "form-inline search-form" do |f| %>
+        <%= f.text_field :search, placeholder: t(".search_holder"), class: "form-control mr-sm-2" %>
+      <% end %>
+    </div>
+    <div class="user-section">
+      <%= link_to "#" do %>
+        <i class="fa fa-compass"></i>
+      <% end %>
+
+      <%= link_to "#" do %>
+        <i class="fa fa-heart"></i>
+      <% end %>
+
+      <%= link_to "#" do %>
+        <i class="fa fa-user"></i>
+      <% end %>
+    </div>
+  </div>
+</nav>

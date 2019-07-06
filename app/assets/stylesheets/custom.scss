@@ -1,0 +1,49 @@
+@import 'bootstrap';
+@import 'font-awesome';
+
+$dark-black: #000000d4;
+$dark-blue: #003569;
+$white-skin: #999;
+
+.container{
+  max-width: 1000px;
+}
+.navbar{
+  border-bottom: 1px solid rgba(0,0,0,.0975);
+}
+.user-section{
+  a{
+    padding-left: 15px;
+  }
+  i.fa{
+    font-size: 22px;
+    color: $dark-black;
+  }
+}
+.search-form{
+  input{
+    font-size: 13px;
+    text-align: center;
+  }
+}
+.search-page{
+  h1{
+    font-size: 24px;
+    padding: 25px 0 0 30px;
+  }
+}
+.footer{
+  font-size: 12px;
+  padding-top: 30px;
+  ul{
+    padding-left: 0;
+    > li{
+      display: inline;
+      padding-right: 15px;
+      color: $dark-blue;
+    }
+  }
+  p{
+    color: $white-skin;
+  }
+}

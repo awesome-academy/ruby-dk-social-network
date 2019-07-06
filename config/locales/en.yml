@@ -1,1 +1,11 @@
 en:
+  title: "Social Network"
+  layouts:
+    header:
+      search_holder: "@Search"
+    footer:
+      about: "ABOUT US"
+      support: "SUPPORT"
+      hashtag: "HASHTAG"
+      eng: "ENGLISH"
+      vie: "VIETNAMESE"
