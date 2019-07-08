@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RubyDkSocialNetwork</title>
+    <title><%= t "title" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+
+    <!--Main content-->
+    <main class="container" style="min-height: 500px;">
+      <%= yield %>
+    </main>
+
+    <%= render "layouts/footer" %>
   </body>
 </html>
+

@@ -1,0 +1,11 @@
+vi:
+  title: "Mạng Xã Hội"
+  layouts:
+    header:
+      search_holder: "@Tìm kiếm"
+    footer:
+      about: "GIỚI THIỆU"
+      support: "HỖ TRỢ"
+      hashtag: "HASHTAG"
+      eng: "TIẾNG ANH"
+      vie: "TIẾNG VIỆT"
