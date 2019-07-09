@@ -3,9 +3,11 @@ vi:
   layouts:
     header:
       search_holder: "@Tìm kiếm"
+      sign_out: Đăng xuất
     footer:
       about: "GIỚI THIỆU"
       support: "HỖ TRỢ"
       hashtag: "HASHTAG"
       eng: "TIẾNG ANH"
       vie: "TIẾNG VIỆT"
+      slogan: © 2019 Social Network
