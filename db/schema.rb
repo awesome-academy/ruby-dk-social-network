@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2019_07_08_072658) do
   create_table "generals", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_generals_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -67,4 +69,5 @@ ActiveRecord::Schema.define(version: 2019_07_08_072658) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "generals", "users"
 end

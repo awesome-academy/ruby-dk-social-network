@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  belongs_to :user, dependent: :destroy
   has_many :generals, dependent: :destroy
   has_many :comments, through: :generals, source: :generalable,
            source_type: :Comment
