@@ -1,0 +1,68 @@
+<div class="user-profile">
+  <div class="profile row">
+    <div class="col-md-4 avatar">
+      <div class="wrapper">
+        <% if @user.avatar? %>
+          <%= image_tag @user.avatar.to_s %>
+        <% else %>
+          <%= image_tag "ocean.jpg" %>
+        <% end %>
+       </div>
+    </div>
+
+    <div class="col-md-8 basic-info">
+      <div class="user-wrapper">
+        <h2 class="username"><%= @user.user_name %></h2>
+        <% if current_user %>
+          <%= link_to "#", class: "edit-profile" do %>
+            <button><%= t ".edit_profile" %></button>
+          <% end %>
+        <% end %>
+      </div>
+      <ul class="posts">
+        <li><span>12</span> posts</li>
+        <li><span>195</span> followers</li>
+        <li><span>345</span> following</li>
+      </ul>
+      <h2 class="name"><%= @user.name %></h2>
+      <h2 class="website"><%= @user.website %></h2>
+    </div>
+  </div>
+</div>
+
+<div class="user-tabs">
+
+  <%= link_to "#", class: "tab active" do %>
+    <i class="fa fa-th"></i>
+    <%= t "pots" %>
+  <% end %>
+
+  <%= link_to "#", class: "tab" do %>
+    <i class="fa fa-tv"></i>
+    <%= t "igtv" %>
+  <% end %>
+
+  <%= link_to "#", class: "tab" do %>
+    <i class="fa fa-bookmark"></i>
+    <%= t "saved" %>
+  <% end %>
+
+  <%= link_to "#", class: "tab" do %>
+    <i class="fa fa-tag"></i>
+    <%= t "tagged" %>
+  <% end %>
+</div>
+
+<div class="user-images">
+  <div class="wrapper">
+    <%= image_tag "ocean.jpg" %>
+  </div>
+  <div
+    class="wrapper">
+    <%= image_tag "ocean.jpg" %>
+  </div>
+  <div
+    class="wrapper">
+    <%= image_tag "ocean.jpg" %>
+  </div>
+</div>

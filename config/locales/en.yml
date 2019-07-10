@@ -11,3 +11,15 @@ en:
       eng: "ENGLISH"
       vie: "VIETNAMESE"
       slogan: © 2019 Social Network
+
+  updating: Updating
+  pots: POSTS
+  igtv: IGTV
+  saved: SAVED
+  tagged: TAGGED
+  warning: Warning
+  no_pages_found: No pages found
+
+  users:
+    show:
+      edit_profile: Edit Profile
