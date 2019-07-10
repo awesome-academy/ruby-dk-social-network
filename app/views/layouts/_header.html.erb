@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light d-flex">
   <div class="container">
     <div class="logo">
-      <%= link_to "#", class: "navbar-brand" do %>
+      <%= link_to root_path, class: "navbar-brand" do %>
         <%= fa_stacked_icon "camera inverse", base: "circle"%>
         <%= t "title" %>
       <% end %>
@@ -20,8 +20,17 @@
         <i class="fa fa-heart"></i>
       <% end %>
 
-      <%= link_to "#" do %>
-        <i class="fa fa-user"></i>
+      <% if user_signed_in? %>
+        <%= link_to "#" do %>
+          <i class="fa fa-user"></i>
+        <% end %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+          <i class="fa fa-sign-in"></i>
+        <% end %>
       <% end %>
     </div>
   </div>
