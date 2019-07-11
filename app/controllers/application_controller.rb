@@ -10,4 +10,14 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {locale: I18n.locale}
   end
+
+  def break_out
+    redirect_to root_path
+    flash.alert = t "warning"
+  end
+
+  def verify_admin
+    return if user_signed_in? && current_user.admin?
+    break_out
+  end
 end

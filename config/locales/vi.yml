@@ -11,3 +11,15 @@ vi:
       eng: "TIẾNG ANH"
       vie: "TIẾNG VIỆT"
       slogan: © 2019 Social Network
+
+  updating: Đang cập nhật
+  pots: POSTS
+  igtv: IGTV
+  saved: SAVED
+  tagged: TAGGED
+  warning: Cảnh báo
+  no_pages_found: Không tìm thấy trang
+
+  users:
+    show:
+      edit_profile: Cập nhật thông tin
