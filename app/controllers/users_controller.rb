@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: %i(edit show)
+  before_action :load_user, only: %i(edit show update)
   before_action :verify_user, only: %i(edit update)
   before_action :verify_admin, only: :index
 
@@ -9,12 +9,19 @@ class UsersController < ApplicationController
 
   def edit; end
 
-  def update; end
+  def update
+    if current_user.update user_params
+      redirect_to current_user
+      flash.notice = t "users.edit.update_success"
+    else
+      render :edit
+    end
+  end
 
   private
 
   def verify_user
-    break_out unless current_user.present?
+    break_out unless current_user? @user
   end
 
   def load_user
