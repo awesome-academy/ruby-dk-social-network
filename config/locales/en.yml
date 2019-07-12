@@ -17,9 +17,37 @@ en:
   igtv: IGTV
   saved: SAVED
   tagged: TAGGED
-  warning: Warning
   no_pages_found: No pages found
 
   users:
     show:
       edit_profile: Edit Profile
+    edit:
+      update_success: Updated success
+      change_password: Change Password
+      authorized_applications: Authorized Applications
+      email_and_sms: Email and SMS
+      manage_contacts: Manage Contacts
+      privacy_and_security: Privacy and Security
+
+  submit: Submit
+  name: Name
+  user_name: Alias
+  web_site: Website
+
+  activerecord:
+    attributes:
+      user:
+        name: Name
+        user_name: Alias
+    errors:
+      format: "%{attribute} %{message}"
+      messages:
+        blank: is blank
+        invalid: invalid
+        too_long: too long
+        too_short: too short
+        confirmation: "confirmation %{attribute}"
+
+  the_form_contains: The form contains
+  errors: errors

@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+  include UsersHelper
+
   before_action :set_locale
 
   private
@@ -13,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   def break_out
     redirect_to root_path
-    flash.alert = t "warning"
+    flash.alert = t "no_pages_found"
   end
 
   def verify_admin

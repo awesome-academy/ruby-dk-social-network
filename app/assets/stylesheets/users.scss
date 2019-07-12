@@ -32,7 +32,7 @@ $color-photo: #3897f0;
     margin-left: 20px;
     margin-top: 5px;
   }
-  .edit-profile button {
+  .edit-profile {
     background-color: transparent;
     border-radius: 5px;
     border: 1px solid $grey-border;
@@ -128,7 +128,7 @@ $color-photo: #3897f0;
       background-color: white;
       color: black;
       border-radius: 0;
-      padding: 12px 0 30px;
+      padding: 12px 0 12px 30px;
       &:hover {
         cursor: pointer;
       }

@@ -13,9 +13,9 @@
     <div class="col-md-8 basic-info">
       <div class="user-wrapper">
         <h2 class="username"><%= @user.user_name %></h2>
-        <% if current_user %>
-          <%= link_to "#", class: "edit-profile" do %>
-            <button><%= t ".edit_profile" %></button>
+        <% if current_user?@user %>
+          <%= link_to edit_user_path current_user do %>
+            <button class="edit-profile"><%= t ".edit_profile" %></button>
           <% end %>
         <% end %>
       </div>
