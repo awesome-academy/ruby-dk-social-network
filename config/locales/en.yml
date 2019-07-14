@@ -49,5 +49,15 @@ en:
         too_short: too short
         confirmation: "confirmation %{attribute}"
 
-  the_form_contains: The form contains
-  errors: errors
+  shared:
+    error_messages:
+      the_form_contains: "The form contains"
+      errors: "errors"
+    post_form:
+      holder: "What's in your mind?"
+      btn_post: "Post"
+      public: "Public"
+      private: "Private"
+
+  create_success: "Create success"
+  create_fail: "Create Fail"

@@ -1,4 +1,4 @@
-User.create!(name: "Admin",
+User.create!(name: "Admin role",
              user_name: "Super role",
              website: "Sun * Asterisk",
              email: "admin@gmail.com",
