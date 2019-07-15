@@ -29,6 +29,9 @@ vi:
       email_and_sms: Email và SMS
       manage_contacts: Thông tin danh bạ
       privacy_and_security: Quyền riêng tư và bảo mật
+    show_follow:
+      following: Theo dõi
+      followers: Người theo dõi
 
   submit: Cập nhật
   name: Tên
@@ -61,3 +64,8 @@ vi:
 
   create_success: "Tạo thành công"
   create_fail: "Tạo thất bại"
+  the_form_contains: Biểu mẫu chứa
+  errors: lỗi
+  un_follow: Huỷ theo dõi
+  follow: Theo dõi
+  posts: Bài viết
