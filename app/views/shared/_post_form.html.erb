@@ -1,0 +1,28 @@
+<%= form_for @post do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="post_content">
+    <div class="form-group">
+      <%= f.text_area :content, placeholder: t(".holder"), class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.fields_for :generalable do |p| %>
+        <%= p.file_field :image, multiple: true, name: "photos[image][]",
+                         accept: "image/*", class: "upload-image" %>
+      <% end %>
+
+      <%= f.fields_for :generalable do |v| %>
+        <%= v.file_field :clip, multiple: true, name: "videos[clip][]",
+                         accept: "video/*" %>
+      <% end %>
+
+      <span class="float-right">
+        <%= f.select :status, [[t(".public"), false], [t(".private"), true]], {},
+                     {class: "status-select"} %>
+
+        <%= f.submit t(".btn_post"), class: "btn" %>
+      </span>
+    </div>
+    <div id="preview"></div>
+  </div>
+<% end %>

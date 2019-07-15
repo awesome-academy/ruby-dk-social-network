@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_072658) do
+ActiveRecord::Schema.define(version: 2019_07_13_112208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,13 @@ ActiveRecord::Schema.define(version: 2019_07_08_072658) do
   end
 
   create_table "generals", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "post_id"
+    t.integer "generalable_id"
+    t.string "generalable_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
+    t.index ["post_id"], name: "index_generals_on_post_id"
     t.index ["user_id"], name: "index_generals_on_user_id"
   end
 
@@ -32,14 +36,28 @@ ActiveRecord::Schema.define(version: 2019_07_08_072658) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "multis", force: :cascade do |t|
+    t.bigint "post_id"
+    t.integer "multiable_id"
+    t.string "multiable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_multis_on_post_id"
+  end
+
   create_table "photos", force: :cascade do |t|
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
+    t.bigint "user_id"
+    t.text "content"
+    t.boolean "status", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "relationships", force: :cascade do |t|
@@ -65,9 +83,9 @@ ActiveRecord::Schema.define(version: 2019_07_08_072658) do
   end
 
   create_table "videos", force: :cascade do |t|
+    t.string "clip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "generals", "users"
 end

@@ -23,4 +23,9 @@ class ApplicationController < ActionController::Base
     return if user_signed_in? && current_user.admin?
     break_out
   end
+
+  def logged_in_user
+    return if user_signed_in?
+    break_out
+  end
 end

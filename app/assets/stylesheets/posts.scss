@@ -1,0 +1,66 @@
+$blue: #3498db;
+$white: #fff;
+$gray: #aaa;
+$dark-gray: #555;
+$jet-black: #00000080;
+
+.btn {
+  border-color: $blue;
+  color: $white;
+  box-shadow: 0 0 20px 20px $blue inset, 0 0 0 0 $blue;
+  transition: all 150ms ease-in-out;
+  width: 150px;
+  margin-left: 15px;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 $blue inset, 0 0 5px 3px $blue;
+  }
+}
+.post_content {
+  padding: 0;
+  width: 100%;
+
+  img {
+    float: left;
+    width: 100px;
+    height: 100px;
+  }
+
+  textarea {
+    margin-top: 0px;
+    outline: 0;
+    resize: none;
+    height: 100px;
+  }
+}
+
+.new-status {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 1px 0 10px $gray;
+  font-family: 'Helvetica Neaue', 'Helvetica', sans-serif;
+  margin-top: 1rem;
+  padding: 10px;
+  overflow: hidden;
+  z-index: 3;
+  position: relative;
+}
+
+.status-select {
+  border: 1px solid $gray;
+  color: $dark-gray;
+  padding: 5px 10px;
+  white-space: nowrap;
+  width: 120px;
+}
+
+.overlay {
+  background-color: $jet-black;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  display: none;
+}

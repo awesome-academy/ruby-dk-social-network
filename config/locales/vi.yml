@@ -49,5 +49,15 @@ vi:
         too_short: Quá ngắn
         confirmation: "confirmation %{attribute}"
 
-  the_form_contains: Biểu mẫu chứa
-  errors: lỗi
+  shared:
+    error_messages:
+      the_form_contains: "Biểu mẫu chứa"
+      errors: "lỗi"
+    post_form:
+      holder: "Bạn đang nghĩ gì?"
+      btn_post: "Đăng"
+      public: "Công khai"
+      private: "Riêng tư"
+
+  create_success: "Tạo thành công"
+  create_fail: "Tạo thất bại"
