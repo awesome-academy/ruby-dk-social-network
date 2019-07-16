@@ -1,0 +1,15 @@
+<% @user ||= current_user %>
+<ul class="posts">
+  <li><span><%= @user.posts.size %> </span><%= t "posts" %></li>
+  <li>
+    <%= link_to relationships_path @user, follow_path: :following do %>
+      <span id="following" class="posts"><%= @user.following.size %></span>
+      <%= t "users.show_follow.following" %>
+    <% end %>
+  </li>
+  <li>
+    <%= link_to relationships_path @user, follow_path: :followers do %>
+      <span id="followers" class="posts"><%= @user.followers.size %></span>
+      <%= t "users.show_follow.followers" %>
+    <% end %></li>
+</ul>

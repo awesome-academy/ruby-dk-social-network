@@ -52,6 +52,12 @@ $color-photo: #3897f0;
         font-weight: 600;
       }
     }
+    a {
+      color: $dark;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   .name {
     font-size: 15px;
@@ -179,4 +185,9 @@ $color-photo: #3897f0;
   input[type='submit'] {
     color: white;
   }
+}
+
+#follow {
+  color: white;
+  background-color: $color-photo;
 }

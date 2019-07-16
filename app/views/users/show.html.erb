@@ -13,17 +13,17 @@
     <div class="col-md-8 basic-info">
       <div class="user-wrapper">
         <h2 class="username"><%= @user.user_name %></h2>
-        <% if current_user?@user %>
-          <%= link_to edit_user_path current_user do %>
-            <button class="edit-profile"><%= t ".edit_profile" %></button>
+        <% if user_signed_in? %>
+          <% if current_user?@user %>
+            <%= link_to edit_user_path current_user do %>
+              <button class="edit-profile"><%= t ".edit_profile" %></button>
+            <% end %>
+          <% else %>
+            <%= render "follow_form" %>
           <% end %>
         <% end %>
       </div>
-      <ul class="posts">
-        <li><span>12</span> posts</li>
-        <li><span>195</span> followers</li>
-        <li><span>345</span> following</li>
-      </ul>
+      <%= render "stat" %>
       <h2 class="name"><%= @user.name %></h2>
       <h2 class="website"><%= @user.website %></h2>
     </div>

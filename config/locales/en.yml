@@ -29,6 +29,9 @@ en:
       email_and_sms: Email and SMS
       manage_contacts: Manage Contacts
       privacy_and_security: Privacy and Security
+    show_follow:
+      following: Following
+      followers: Followers
 
   submit: Submit
   name: Name
@@ -61,3 +64,8 @@ en:
 
   create_success: "Create success"
   create_fail: "Create Fail"
+  the_form_contains: The form contains
+  errors: errors
+  un_follow: Unfollow
+  follow: Follow
+  posts: Posts
