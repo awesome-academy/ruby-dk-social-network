@@ -42,4 +42,8 @@ class User < ApplicationRecord
     Post.order_posts.where "user_id IN (#{followings})
       OR user_id = :user_id", user_id: id
   end
+
+  def current_user? user
+    user == self
+  end
 end

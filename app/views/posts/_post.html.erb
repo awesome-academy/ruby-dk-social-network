@@ -11,6 +11,21 @@
         <%= time_ago_in_words post.created_at %>
       </span>
     </div>
+    <% if post.user.current_user? current_user %>
+      <div class="pin">
+        <ul class="dropdown-setting-post nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <b class="caret"></b>
+            </a>
+            <ul role="menu" class="dropdown-menu">
+              <p><%= link_to t("btn_del_post"), post, method: :delete,
+                             data: { confirm: t("del_confirm") } %></p>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    <% end %>
   </div>
   <div class="caption">
     <%= post.content %>

@@ -94,3 +94,7 @@ vi:
       x_days:
         one: "1 ngày"
         other: "%{count} ngày"
+  del_post: "Bài đăng đã được xóa"
+  del_fail: "Xóa bài đăng thất bại"
+  btn_del_post: "Xóa"
+  del_confirm: "Bạn chắc chứ?"

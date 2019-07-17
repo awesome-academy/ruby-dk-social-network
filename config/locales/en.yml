@@ -93,3 +93,7 @@ en:
       x_days:
         one: "1 day"
         other: "%{count} days"
+  del_post: "Post deleted"
+  del_fail: "Delete failed"
+  btn_del_post: "Delete"
+  del_confirm: "You sure?"
