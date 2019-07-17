@@ -17,10 +17,13 @@ class Post < ApplicationRecord
   validates :content, length: {maximum: Settings.content_max}
   validate :post_presences
 
+  scope :order_posts, ->{order created_at: :desc}
+  scope :public_posts, ->{where(status: false)}
+
   private
 
   def post_presences
-    return if content.present? && photos.present? && videos.present?
-    errors.add :content, "Please post something"
+    return if content.present? || photos.any? || videos.any?
+    errors.add :post, t("post_something")
   end
 end

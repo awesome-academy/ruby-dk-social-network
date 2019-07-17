@@ -53,16 +53,11 @@
   <% end %>
 </div>
 
-<div class="user-images">
-  <div class="wrapper">
-    <%= image_tag "ocean.jpg" %>
-  </div>
-  <div
-    class="wrapper">
-    <%= image_tag "ocean.jpg" %>
-  </div>
-  <div
-    class="wrapper">
-    <%= image_tag "ocean.jpg" %>
-  </div>
+<div class="posts-wrapper">
+  <% if @user.posts.any? %>
+    <ul>
+      <%= render @posts %>
+    </ul>
+    <%= paginate @posts, theme: "twitter-bootstrap-4" %>
+  <% end %>
 </div>

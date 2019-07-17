@@ -17,3 +17,4 @@
 //= require activestorage
 //= require turbolinks
 //= require post_preview.js
+//= require jquery.flexslider

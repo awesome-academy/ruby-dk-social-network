@@ -36,4 +36,10 @@ class User < ApplicationRecord
   def following? other_user
     following.include? other_user
   end
+
+  def feed
+    followings = Relationship.select(:followed_id).where(follower_id: id).to_sql
+    Post.order_posts.where "user_id IN (#{followings})
+      OR user_id = :user_id", user_id: id
+  end
 end
