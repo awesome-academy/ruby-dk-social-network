@@ -1,8 +1,10 @@
 <% if user_signed_in? %>
+  <div class="overlay"></div>
   <div class="col new-status text">
     <%= render "shared/post_form" %>
   </div>
-  <div class="overlay"></div>
-<% else %>
-  <h1>Home Page</h1>
 <% end %>
+<div class="posts-wrapper">
+  <h3><%= t ".newfeed" %></h3>
+  <%= render "shared/feed" %>
+</div>

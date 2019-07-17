@@ -6,13 +6,13 @@
     </div>
 
     <div class="form-group">
-      <%= f.fields_for :generalable do |p| %>
-        <%= p.file_field :image, multiple: true, name: "photos[image][]",
+      <%= f.fields_for :generalable, @post.photos.build do |p| %>
+        <%= p.file_field :image, multiple: true, name: "post[photos_attributes][][image]",
                          accept: "image/*", class: "upload-image" %>
       <% end %>
 
-      <%= f.fields_for :generalable do |v| %>
-        <%= v.file_field :clip, multiple: true, name: "videos[clip][]",
+      <%= f.fields_for :generalable, @post.videos.build do |v| %>
+        <%= v.file_field :clip, multiple: true, name: "post[videos_attributes][][clip]",
                          accept: "video/*" %>
       <% end %>
 

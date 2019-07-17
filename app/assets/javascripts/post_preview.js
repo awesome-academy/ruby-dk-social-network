@@ -36,4 +36,11 @@ $(document).ready(function () {
     $('.overlay').fadeOut(500);
   });
 });
+
+$(document).ready(function(){
+  $('.flexslider').flexslider({
+    animation: "slide",
+    pauseOnHover: true,
+  });
+});
 });

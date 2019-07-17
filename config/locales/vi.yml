@@ -69,3 +69,28 @@ vi:
   un_follow: Huỷ theo dõi
   follow: Theo dõi
   posts: Bài viết
+  post_something: "Hãy đăng cái gì đó"
+  home:
+    index:
+      newfeed: "Bảng tin mới"
+  views:
+    pagination:
+      first: "&laquo; Trang đầu"
+      last: "Trang cuối &raquo;"
+      previous: "&lsaquo; Trang trước"
+      next: "Trang kế &rsaquo;"
+      truncate: "&hellip;"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "khoảng 1 giờ"
+        other: "khoảng %{count} giờ"
+      less_than_x_minutes:
+        one: "ít hơn 1 phút"
+        other: "ít hơn %{count} phút"
+      x_minutes:
+        one: "1 phút"
+        other: "%{count} phút"
+      x_days:
+        one: "1 ngày"
+        other: "%{count} ngày"

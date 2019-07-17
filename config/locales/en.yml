@@ -69,3 +69,27 @@ en:
   un_follow: Unfollow
   follow: Follow
   posts: Posts
+  post_something: "Please post something"
+  home:
+    index:
+      newfeed: "New Feed"
+  pagination:
+    first: "&laquo; First"
+    last: "Last &raquo;"
+    previous: "&lsaquo; Prev"
+    next: "Next &rsaquo;"
+    truncate: "&hellip;"
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: "about 1 hour"
+        other: "about %{count} hours"
+      less_than_x_minutes:
+        one: "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one: "1 minute"
+        other: "%{count} minutes"
+      x_days:
+        one: "1 day"
+        other: "%{count} days"

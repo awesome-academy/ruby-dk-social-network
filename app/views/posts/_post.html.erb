@@ -1,0 +1,36 @@
+<li class="post">
+  <div class="post-head">
+    <div class="av-na-ti">
+      <% if post.user.avatar? %>
+        <%= image_tag post.user.avatar.to_s %>
+      <% else %>
+        <%= image_tag "ocean.jpg" %>
+      <% end %>
+      <span class="timestamp">
+        <strong><%= link_to post.user.name, post.user %></strong><br/>
+        <%= time_ago_in_words post.created_at %>
+      </span>
+    </div>
+  </div>
+  <div class="caption">
+    <%= post.content %>
+  </div>
+  <div class="flexslider">
+    <ul class="slides">
+      <% post.photos.each do |p| %>
+        <li>
+          <%= image_tag p.image_url, class: "media" %>
+        </li>
+      <% end %>
+      <% post.videos.each do |v| %>
+        <li>
+          <%= video_tag v.clip_url, controls: true, class: "media" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="stats">
+    <span class="col-6 col-md-4"><i class="fa fa-thumbs-o-up fa-lg"></i>Like</span>
+    <span class="col-6 col-md-4"><i class="fa fa-comments-o fa-lg"></i>Comment</span>
+  </div>
+</li>
