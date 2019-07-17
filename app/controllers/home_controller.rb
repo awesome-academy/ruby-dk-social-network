@@ -4,7 +4,8 @@ class HomeController < ApplicationController
       @post = current_user.posts.build
       @feed_items = current_user.feed.page(params[:page]).per Settings.per_page
     else
-      @feed_items = Post.public_posts.order_posts.page(params[:page]).per Settings.per_page
+      @feed_items = Post.public_posts.order_posts.page(params[:page])
+                        .per Settings.per_page
     end
   end
 end

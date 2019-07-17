@@ -123,6 +123,32 @@ $white-nani: #e1e2e3;
       margin-top: 5px;
     }
   }
+  .pin {
+    float: left;
+    width: 10%;
+    height: 100%;
+    text-align: right;
+    position: relative;
+    .dropdown-setting-post {
+      position: absolute;
+      top: 0;
+      right: 0;
+      float: left;
+      border: none;
+      list-style: none;
+    }
+    .nav ul {
+      margin-top: 10px;
+      padding: 10px;
+      right: 0;
+      p {
+        padding: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .media {
