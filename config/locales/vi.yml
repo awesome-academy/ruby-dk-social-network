@@ -25,7 +25,7 @@ vi:
     edit:
       update_success: Cập nhật thành công
       change_password: Thay đổi mật khẩu
-      authorized_applications: Ứng dung được uỷ quyền
+      authorized_applications:  Thông báo
       email_and_sms: Email và SMS
       manage_contacts: Thông tin danh bạ
       privacy_and_security: Quyền riêng tư và bảo mật
@@ -98,3 +98,5 @@ vi:
   del_fail: "Xóa bài đăng thất bại"
   btn_del_post: "Xóa"
   del_confirm: "Bạn chắc chứ?"
+  notifications: Thông báo
+  ago:  trước

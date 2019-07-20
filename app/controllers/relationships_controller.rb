@@ -10,6 +10,10 @@ class RelationshipsController < ApplicationController
       format.html{redirect_to @user}
       format.js
     end
+    @notification = @user.notifications.create event: "#{current_user.name} Follow You"
+    ActionCable.server.broadcast "follow_notification_channel_#{@user.id}",
+      notification: @user.notifications,
+      event: @notification.event
   end
 
   def destroy

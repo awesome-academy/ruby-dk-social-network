@@ -4,9 +4,11 @@ Rails.application.routes.draw do
     root "home#index"
     resources :posts
     resources :users do
+      resources :notifications
       member do
         resources :relationships
       end
     end
   end
+  mount ActionCable.server => "/cable"
 end
