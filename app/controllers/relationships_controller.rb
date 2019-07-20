@@ -1,7 +1,12 @@
 class RelationshipsController < ApplicationController
   before_action :load_user, :default_follow_path, only: :show
 
-  def show; end
+  def show
+    @title = t "users.show_follow.#{params[:follow_path]}"
+    @users = @user.send(params[:follow_path]).page(params[:page])
+                 .per Settings.per_page
+    render :show_follow
+  end
 
   def create
     @user = User.find_by id: params[:followed_id]

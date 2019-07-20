@@ -7,8 +7,13 @@
       <% end %>
     </div>
     <div class="m-auto">
-      <%= form_with class: "form-inline search-form" do |f| %>
-        <%= f.text_field :search, placeholder: t(".search_holder"), class: "form-control mr-sm-2" %>
+      <%= form_tag finds_path, method: :get, class: "form-inline search-form" do  %>
+        <%= search_field_tag :search, params[:search], placeholder: t(".search_holder"), class: "form-control mr-sm-2" %>
+        <div class="input-group-btn">
+          <%= button_tag class: "input-group-text" ,id: "btnGroupAddon" do %>
+            <i class="fa fa-search"></i>
+          <% end %>
+        </div>
       <% end %>
     </div>
     <div class="user-section">

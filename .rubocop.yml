@@ -166,16 +166,16 @@ Metrics/ClassLength:
 # Align with the style guide.
 Style/CollectionMethods:
   # Mapping from undesired method to desired_method
-  # e.g. to use `detect` over `find`:
+  # e.g. to use `detect` over `finds`:
   #
   # CollectionMethods:
   #   PreferredMethods:
-  #     find: detect
+  #     finds: detect
   PreferredMethods:
     collect: 'map'
     collect!: 'map!'
     inject: 'reduce'
-    detect: 'find'
+    detect: 'finds'
     find_all: 'select'
 
 # Checks formatting of special comments

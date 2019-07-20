@@ -2,7 +2,7 @@
   <div class="actions">
     <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
       <%= link_to t("users.show.edit_profile"), edit_user_path(current_user), class: "nav-link" %>
-      <%= link_to t("users.edit.change_password"), "#", class: "nav-link" %>
+      <%= link_to t("users.edit.change_password"), edit_password_path, class: "nav-link" %>
       <%= link_to t("users.edit.authorized_applications"), user_notifications_path(current_user), class: "nav-link" %>
       <%= link_to t("users.edit.email_and_sms"), "#", class: "nav-link" %>
       <%= link_to t("users.edit.manage_contacts"), "#", class: "nav-link" %>

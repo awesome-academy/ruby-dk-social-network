@@ -204,5 +204,18 @@ $color-photo: #3897f0;
 }
 
 .pagination {
-  padding-left: 173px;
+  padding-left: 208px;
+}
+
+.details-search {
+  flex: 1;
+  border: 1px solid $grey-border;
+  margin-top: 15px;
+  margin-left: 291px;
+  width: 400px;
+  height: 500px;
+
+  h4 {
+    text-align: center;
+  }
 }

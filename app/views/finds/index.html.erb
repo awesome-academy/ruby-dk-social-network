@@ -1,0 +1,24 @@
+<div class="">
+  <div class="details-search">
+    <h4><%= t "result" %></h4>
+
+    <% if @results.present? %>
+      <ul class="search-user">
+        <% @results.each do |result| %>
+          <li>
+            <% if result.avatar? %>
+              <%= image_tag result.avatar.to_s, class: "avatar-search" %>
+            <% else %>
+              <%= image_tag "ocean.jpg", class: "avatar-search" %>
+            <% end %>
+            <%= link_to result.name, result, class: "user-name" %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class="result">
+        <%= @result %>
+      </div>
+    <%end %>
+  </div>
+</div>
