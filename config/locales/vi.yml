@@ -96,10 +96,13 @@ vi:
         other: "%{count} ngày"
   del_post: "Bài đăng đã được xóa"
   del_fail: "Xóa bài đăng thất bại"
-  btn_del_post: "Xóa"
+  btn_del: "Xóa"
   del_confirm: "Bạn chắc chứ?"
   notifications: Thông báo
   ago:  trước
   result: Kết quả
   like: Thích
   unlike: Bỏ Thích
+  add_comment: "Bình luận ..."
+  btn_comment: "Đăng"
+  del_comment: "Bình luận đã được xóa"

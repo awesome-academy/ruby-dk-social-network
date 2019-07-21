@@ -1,11 +1,7 @@
-<li class="post">
+<li class="post" id="post-<%= post.id %>">
   <div class="post-head">
     <div class="av-na-ti">
-      <% if post.user.avatar? %>
         <%= image_tag post.user.avatar.to_s %>
-      <% else %>
-        <%= image_tag "ocean.jpg" %>
-      <% end %>
       <span class="timestamp">
         <strong><%= link_to post.user.name, post.user %></strong><br/>
         <%= time_ago_in_words post.created_at %>
@@ -19,7 +15,7 @@
               <b class="caret"></b>
             </a>
             <ul role="menu" class="dropdown-menu">
-              <p><%= link_to t("btn_del_post"), post, method: :delete,
+              <p><%= link_to t("btn_del"), post, method: :delete,
                              data: { confirm: t("del_confirm") } %></p>
             </ul>
           </li>
@@ -45,9 +41,27 @@
     </ul>
   </div>
   <div class="stats">
-    <% if user_signed_in? %>
-      <%= render "likes/like_form", post: post %>
-    <% end %>
-    <span class="col-6 col-md-4"><i class="fa fa-comments-o fa-lg"></i>Comment</span>
+    <span id="likes-<%= post.id %>">
+      <%= post.likes.count %><i class="fa fa-heart"></i>
+    </span>
+    <span class="col-6 col-md-4 float-right" id="comment-count-<%= post.id %>">
+      <%= post.comments.size %><i class="fa fa-comments-o fa-lg"></i>
+    </span>
+  </div>
+  <% if user_signed_in? %>
+    <%= render "likes/like_form", post: post %>
+    <div class="input-comment">
+      <%= form_for [post, @post.comments.build], remote: true do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <div class="text-comment">
+          <%= f.text_field :content, placeholder: t("add_comment"), class: "form-control",
+                           id: "comment-content-#{post.id}" %>
+        </div>
+        <%= f.submit t("btn_comment"), class: "btn float-right" %>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="comments-list" id="comments-<%= post.id %>">
+    <%= render post.comments, post: post %>
   </div>
 </li>

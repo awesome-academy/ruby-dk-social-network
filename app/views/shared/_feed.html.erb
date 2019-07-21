@@ -1,6 +1,8 @@
 <% if @feed_items.any? %>
   <ul>
-    <%= render @feed_items %>
+    <% @feed_items.each do |post| %>
+      <%= render "posts/post", post: post %>
+    <% end %>
   </ul>
   <%= paginate @feed_items, theme: "twitter-bootstrap-4" %>
 <% end %>

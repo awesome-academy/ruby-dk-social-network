@@ -21,6 +21,7 @@ $white-nani: #e1e2e3;
     box-shadow: 0 0 5px 0 $blue inset, 0 0 5px 3px $blue;
   }
 }
+
 .post_content {
   padding: 0;
   width: 100%;
@@ -88,11 +89,10 @@ $white-nani: #e1e2e3;
   border-style: solid;
   border-radius: 3px;
   border-width: 1px;
-  margin-bottom: 20px;
   list-style: none;
+  margin-top: 15px;
   li {
     padding: 10px 0;
-    border-top: 1px solid $white-fog;
   }
 }
 
@@ -116,6 +116,7 @@ $white-nani: #e1e2e3;
     a {
       text-decoration: none;
       color: $black;
+      font-weight: bold;
     }
     .timestamp {
       display: block;
@@ -159,7 +160,7 @@ $white-nani: #e1e2e3;
 }
 
 .caption {
-  padding: 24px 24px;
+  padding: 24px;
   font-size: 15px;
   line-height: 18px;
   word-wrap: break-word;
@@ -196,5 +197,19 @@ $white-nani: #e1e2e3;
   padding-bottom: 10px;
   i {
     margin-left: 8px;
+  }
+}
+
+form .btn-like {
+  border-color: $blue;
+  color: $white;
+  box-shadow: 0 0 20px 20px $blue inset, 0 0 0 0 $blue;
+  transition: all 150ms ease-in-out;
+  width: 130px;
+  margin-left: 0;
+
+  &:hover {
+    box-shadow: 0 0 5px 0 $blue inset, 0 0 5px 3px $blue;
+    color: $black;
   }
 }

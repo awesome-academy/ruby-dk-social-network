@@ -4,7 +4,7 @@ class RelationshipsController < ApplicationController
   def show
     @title = t "users.show_follow.#{params[:follow_path]}"
     @users = @user.send(params[:follow_path]).page(params[:page])
-                 .per Settings.per_page
+                  .per Settings.per_page
     render :show_follow
   end
 
@@ -15,7 +15,8 @@ class RelationshipsController < ApplicationController
       format.html{redirect_to @user}
       format.js
     end
-    @notification = @user.notifications.create event: "#{current_user.name} Follow You"
+    @notification = @user.notifications
+                         .create event: "#{current_user.name} Follow You"
     ActionCable.server.broadcast "follow_notification_channel_#{@user.id}",
       notification: @user.notifications,
       event: @notification.event

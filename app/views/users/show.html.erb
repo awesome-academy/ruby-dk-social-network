@@ -56,7 +56,9 @@
 <div class="posts-wrapper">
   <% if @user.posts.any? %>
     <ul>
-      <%= render @posts %>
+      <% @posts.each do |post| %>
+        <%= render "posts/post", post: post %>
+      <% end %>
     </ul>
     <%= paginate @posts, theme: "twitter-bootstrap-4" %>
   <% end %>

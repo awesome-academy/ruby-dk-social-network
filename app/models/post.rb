@@ -7,9 +7,7 @@ class Post < ApplicationRecord
   has_many :videos, through: :multis, source: :multiable,
            source_type: :Video, dependent: :destroy
   has_many :likes, dependent: :destroy
-
-  has_many :comments, through: :generals, source: :generalable,
-           source_type: :Comment
+  has_many :comments, dependent: :destroy
 
   accepts_nested_attributes_for :photos, :videos
 
@@ -24,6 +22,6 @@ class Post < ApplicationRecord
 
   def post_presences
     return if content.present? || photos.any? || videos.any?
-    errors.add :post, t("post_something")
+    errors.add :post, I18n.t("post_something")
   end
 end
