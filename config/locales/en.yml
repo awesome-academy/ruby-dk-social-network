@@ -105,3 +105,6 @@ en:
   add_comment: "Add comment ..."
   btn_comment: "Post"
   del_comment: "Comment deleted!"
+  comment_fail: "Comment failed!!"
+  post_not_found: "Post not found"
+  comment_not_found: "Comment not found"

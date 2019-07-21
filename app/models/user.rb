@@ -25,6 +25,10 @@ class User < ApplicationRecord
   validates :user_name, presence: true, length: {minimum: Settings.name_min,
                                                  maximum: Settings.name_max}
 
+  scope :find_user, (lambda do
+    where "lower(name) LIKE :search", search: "%#{@parameter}%"
+  end)
+
   def follow other_user
     following << other_user
   end

@@ -1,7 +1,7 @@
 <div class="comment">
-    <%= image_tag comment.user.avatar.to_s %>
+    <%= image_tag comment.avatar.to_s %>
   <div class="comment-content">
-    <%= link_to comment.user.name, comment.user %>
+    <%= link_to comment.name, comment.user %>
 
     <%= comment.content %></br>
 

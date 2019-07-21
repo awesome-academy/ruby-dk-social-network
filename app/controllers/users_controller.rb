@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @posts = @user.posts.order_posts.page(params[:page]).per Settings.per_page
+    return unless user_signed_in?
     @post = current_user.posts.build
   end
 
