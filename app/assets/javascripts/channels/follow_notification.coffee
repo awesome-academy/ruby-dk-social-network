@@ -6,4 +6,3 @@ App.follow_notification = App.cable.subscriptions.create "FollowNotificationChan
   received: (data) ->
     console.log(data["event"])
     alert(data["event"])
-    $('#open_notification').prepend "#{data["notification"].count}"

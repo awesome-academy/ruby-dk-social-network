@@ -3,6 +3,8 @@ Rails.application.routes.draw do
     devise_for :users
     root "home#index"
     resources :posts
+    resources :finds
+    get "/edit-password" => "users#edit_password"
     resources :users do
       resources :notifications
       member do

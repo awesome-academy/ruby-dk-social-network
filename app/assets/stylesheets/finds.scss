@@ -1,0 +1,27 @@
+.avatar-search {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+
+.search-user {
+  li {
+    padding-top: 15px;
+    list-style-type: none;
+  }
+  .user-name {
+    padding-left: 15px;
+    color: #262626;
+    text-decoration: none;
+  }
+}
+
+.followers {
+  padding-left: 20px;
+  color: #262626;
+  text-decoration: none;
+}
+
+.result {
+  text-align: center;
+}
