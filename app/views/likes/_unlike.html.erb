@@ -1,0 +1,5 @@
+<%= form_for post.likes.find_by(post_id: post.id ), url: post_like_path(post, pre_like),
+             html: {method: :delete},
+             remote: true do |f| %>
+  <%= f.submit t "unlike" %>
+<% end %>

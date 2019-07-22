@@ -14,8 +14,7 @@ class User < ApplicationRecord
 
   has_many :generals, dependent: :destroy
   has_many :posts, dependent: :destroy
-  has_many :likes, through: :generals, source: :generalable,
-           source_type: :Like
+  has_many :likes, dependent: :destroy
   has_many :comments, through: :generals, source: :generalable,
            source_type: :Comment
 

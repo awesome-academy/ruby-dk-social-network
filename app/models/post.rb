@@ -6,8 +6,8 @@ class Post < ApplicationRecord
            source_type: :Photo, dependent: :destroy
   has_many :videos, through: :multis, source: :multiable,
            source_type: :Video, dependent: :destroy
-  has_many :likes, through: :generals, source: :generalable,
-           source_type: :Like
+  has_many :likes, dependent: :destroy
+
   has_many :comments, through: :generals, source: :generalable,
            source_type: :Comment
 
