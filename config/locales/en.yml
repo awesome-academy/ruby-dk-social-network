@@ -25,7 +25,7 @@ en:
     edit:
       update_success: Updated success
       change_password: Change Password
-      authorized_applications: Authorized Applications
+      authorized_applications: Notificatons
       email_and_sms: Email and SMS
       manage_contacts: Manage Contacts
       privacy_and_security: Privacy and Security
@@ -97,3 +97,5 @@ en:
   del_fail: "Delete failed"
   btn_del_post: "Delete"
   del_confirm: "You sure?"
+  notifications: Notifications
+  ago: ago

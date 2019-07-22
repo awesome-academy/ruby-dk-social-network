@@ -19,6 +19,8 @@ class User < ApplicationRecord
   has_many :comments, through: :generals, source: :generalable,
            source_type: :Comment
 
+  has_many :notifications
+
   mount_uploader :avatar, AvatarUploader
   validates :name, presence: true, length: {minimum: Settings.name_min,
                                             maximum: Settings.name_max}

@@ -16,11 +16,13 @@
         <i class="fa fa-compass"></i>
       <% end %>
 
-      <%= link_to "#" do %>
-        <i class="fa fa-heart"></i>
-      <% end %>
-
       <% if user_signed_in? %>
+
+        <%= link_to user_notifications_path current_user do %>
+          <i class="fa fa-bell" id="open_notification"></i>
+          <%= render "notifications/counter", counter: current_user.notifications.count %>
+        <% end %>
+
         <%= link_to user_path current_user do %>
           <i class="fa fa-user"></i>
         <% end %>
