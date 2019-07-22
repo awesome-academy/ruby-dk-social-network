@@ -1,0 +1,11 @@
+<div id="likes">
+  <%= post.likes.count %><i class="fa fa-heart"></i>
+</div>
+<div id="like-form">
+  <% pre_like = post.likes.find { |like| like.user_id == current_user.id} %>
+  <% if pre_like %>
+    <%= render "likes/unlike", post: post, pre_like: pre_like %>
+  <% else %>
+    <%= render "likes/like", post: post %>
+  <% end %>
+</div>

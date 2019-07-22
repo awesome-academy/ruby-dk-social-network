@@ -45,7 +45,9 @@
     </ul>
   </div>
   <div class="stats">
-    <span class="col-6 col-md-4"><i class="fa fa-thumbs-o-up fa-lg"></i>Like</span>
+    <% if user_signed_in? %>
+      <%= render "likes/like_form", post: post %>
+    <% end %>
     <span class="col-6 col-md-4"><i class="fa fa-comments-o fa-lg"></i>Comment</span>
   </div>
 </li>
