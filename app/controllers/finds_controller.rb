@@ -5,11 +5,9 @@ class FindsController < ApplicationController
     else
       @parameter = params[:search].downcase
       @results = User.all.where("lower(name) LIKE :search",
-          search: "%#{@parameter}%")
+        search: "%#{@parameter}%")
 
-      if @results.blank?
-        @result = t "no_pages_found"
-      end
+      @result = t "no_pages_found" if @results.blank?
     end
   end
 end

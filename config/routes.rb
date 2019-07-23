@@ -4,9 +4,11 @@ Rails.application.routes.draw do
     root "home#index"
     resources :posts do
       resources :likes
+      resources :comments
     end
     resources :finds
     get "/edit-password" => "users#edit_password"
+    resource :comments
     resources :users do
       resources :notifications
       member do

@@ -8,6 +8,7 @@ class PostsController < ApplicationController
       flash.notice = t "create_success"
       redirect_to root_path
     else
+      @feed_items = []
       render "home/index"
     end
   end

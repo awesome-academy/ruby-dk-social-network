@@ -1,0 +1,3 @@
+$('#comments-<%= @post.id %>').append('<%= j render 'comments/comment', post: @post, comment: @comment %>');
+$('#comment-content-<%= @post.id %>').val('');
+$('#comment-count-<%= @post.id %>').html('<%= @post.comments.size %><i class="fa fa-comments-o fa-lg"></i>');

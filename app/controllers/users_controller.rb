@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @posts = @user.posts.order_posts.page(params[:page]).per Settings.per_page
+    @post = current_user.posts.build
   end
 
   def edit; end

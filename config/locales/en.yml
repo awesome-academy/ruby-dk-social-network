@@ -95,10 +95,13 @@ en:
         other: "%{count} days"
   del_post: "Post deleted"
   del_fail: "Delete failed"
-  btn_del_post: "Delete"
+  btn_del: "Delete"
   del_confirm: "You sure?"
   notifications: Notifications
   ago: ago
   result: Result
   like: Like
   unlike: Unlike
+  add_comment: "Add comment ..."
+  btn_comment: "Post"
+  del_comment: "Comment deleted!"
