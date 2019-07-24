@@ -7,20 +7,27 @@ class CommentsController < ApplicationController
     @comment = @post.comments.build comment_params
     @comment.user_id = current_user.id
 
-    return unless @comment.save
-    respond_to do |format|
-      format.html{redirect_to root_path}
-      format.js
+    if @comment.save
+      respond_to do |format|
+        format.html{redirect_to root_path}
+        format.js
+      end
+    else
+      flash.alert = t "comment_fail"
+      render root_path
     end
   end
 
   def destroy
-    if @comment.destroy
-      flash.notice = t "del_comment"
+    if @comment.destroy?
+      respond_to do |format|
+        format.html{redirect_to request.referrer || root_url}
+        format.js
+      end
     else
       flash.alert = t "del_fail"
+      render "home/index"
     end
-    redirect_to request.referrer || root_url
   end
 
   private
@@ -31,11 +38,15 @@ class CommentsController < ApplicationController
 
   def load_post
     @post = Post.find_by id: params[:post_id]
-    redirect_to root_url unless @post
+    return if @post
+    flash.alert = t "post_not_found"
+    redirect_to root_url
   end
 
   def correct_comment
-    @comment = current_user.comments.find_by id: params[:post_id]
-    redirect_to root_url unless @comment
+    @comment = current_user.comments.find_by id: params[:id]
+    return if @comment
+    flash.alert = t "comment_not_found"
+    redirect_to root_url
   end
 end

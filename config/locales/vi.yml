@@ -106,3 +106,6 @@ vi:
   add_comment: "Bình luận ..."
   btn_comment: "Đăng"
   del_comment: "Bình luận đã được xóa"
+  comment_fail: "Comment failed!!"
+  post_not_found: "Không tìm thấy bài đăng"
+  comment_not_found: "Không tìm thấy bình luận"
